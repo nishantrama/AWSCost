@@ -27,6 +27,9 @@ curl --location --request POST 'https://'$DT_HOST'/api/v2/metrics/ingest' \
 --header 'Content-Type: text/plain; charset=utf-8' \
 --header 'Authorization: Api-Token '$DT_API_TOKEN \
 --data-raw 'custom.aws.blendedcost,instancetype= NUMBER 
+#custom.aws.blendedcost dt.meta.displayName="AWS BlendedCost"
+custom.aws.blendedcost,instancetype= NUMBER
+custom.aws.blendedcost,instancetype= NUMBER
 custom.aws.blendedcost,instancetype= NUMBER '
 
 #check if OneAgent is running
