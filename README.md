@@ -10,7 +10,7 @@ A conceptual visualization of the end goal. Keep an eye on the goal while enjoyi
 </p>
 
 
-###Team
+### Team
 - Markie "Team Lead" Duby
 - Aakash " " Kadakia
 - Nish "Stella/Tezla" Rama
