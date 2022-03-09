@@ -92,11 +92,10 @@ Screenshot of required permissions.<br>
 
 2. Rewrite in Python for portability to all environments
 
-3. Verify Plugin is actually running on EC2 instance before deploying
-
-4. Integrate [AWS GetRightSizing Recommendations](
+3. Integrate [AWS GetRightSizing Recommendations](
 https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetRightsizingRecommendation.html)
 
-5. Expand support to other cloud solutions 
+4. Expand support to other cloud solutions 
 
-6. Refine AWS permissions to minimum set.
+
+5. Refine AWS permissions to minimum set.
