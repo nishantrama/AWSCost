@@ -1,11 +1,7 @@
 <h1 align="center"> AWS Cost Utility<project-name></h1>
 
 ## Overview
-Provide an automated mechanism to pull metrics from AWS Billing and Cost Management APIs and ingest them into Dynatrace for charting and Dashboard visualization.
-
-Step 1:
-Granting IAM permissions to use the AWS Cost Explorer API
-An IAM user must be granted explicit permission to query the AWS Cost Explorer API. For the policy that grants the necessary permissions to an IAM user. Your IAM role once created the last box will have the access key and secret key. you can also use AWS CLI to create the role. This would be a one time creation. 
+Provide an automated mechanism to pull metrics from AWS Billing and Cost Management APIs and ingest them into Dynatrace for charting and Dashboard visualization.=
 
 
 
@@ -22,18 +18,21 @@ An IAM user must be granted explicit permission to query the AWS Cost Explorer A
 
 ### Step 1: Getting Started
 
-1. Pull down the code repo.
+1. Granting IAM permissions to use the AWS Cost Explorer API
+An IAM user must be granted explicit permission to query the AWS Cost Explorer API. For the policy that grants the necessary permissions to an IAM user. Your IAM role once created the last box will have the access key and secret key. you can also use AWS CLI to create the role. This would be a one time creation. 
+
+2. Pull down the code repo.
 
    ```bash
    git clone https://github.com/nishantrama/AWSCost
    ```
 
-2. Change directories.
+3. Change directories.
 
     ```bash
     cd AWSCost
     ```
-3. Install the necessary packages.
+4. Install the necessary packages.
 
    ```bash
    <blah, blah, blah>
