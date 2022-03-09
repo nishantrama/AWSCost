@@ -21,20 +21,21 @@ else
   exit 0
 fi
 
-currDate = date '+%Y:%m:%d'
-oldDate = date --date="yesterday" '+%Y:%m:%d'
+currDate=`date '+%Y:%m:%d'`
+oldDate=`date --date="yesterday" '+%Y:%m:%d'`
 
-costResponse = aws ce get-cost-and-usage --time-period Start=$oldDate,End=$currDate --metrics "UnblendedCost" --granularity "DAILY" --group-by Type=DIMENSION,Key=INSTANCE_TYPE
+costResponse=`'aws ce get-cost-and-usage --time-period Start='$oldDate',End='$currDate' --metrics "UnblendedCost" --granularity "DAILY" --group-by Type=DIMENSION,Key=INSTANCE_TYPE'`
+awsErrorString='Data is not available'
 
-if [ $costResponse =~ '.*Data is not available.*' ];
+if [ "$costResponse" == *"$awsErrorString"* ];
 then
-  costValue = 0
+  costValue=0
 else
-  
+  echo "We got a value" 
 fi
 
 # this will need to include a loop for all instance type
-dataRaw = 'custom.aws.unblendedcost,instancetype= '$costValue'
+dataRaw='custom.aws.unblendedcost,instancetype=DummyType '$costValue'
 #custom.aws.unblendedcost dt.meta.displayName="AWS UnblendedCost"' 
 
 curl --location --request POST 'https://'$DT_HOST'/api/v2/metrics/ingest' \
