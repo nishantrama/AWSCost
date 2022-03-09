@@ -1,7 +1,7 @@
 <h1 align="center"> AWS Cost Utility<project-name></h1>
 
 ## Overview
-Provide an automated mechanism to pull metrics from AWS Billing and Cost Management APIs and ingest them into Dynatrace for charting and Dashboard visualization.=
+Provide an automated mechanism to pull metrics from AWS Billing and Cost Management APIs and ingest them into Dynatrace for charting and Dashboard visualization.
 
 
 
@@ -20,12 +20,9 @@ Provide an automated mechanism to pull metrics from AWS Billing and Cost Managem
 
 1. Granting IAM permissions to use the AWS Cost Explorer API<br>
 An IAM user must be granted explicit permission to query the AWS Cost Explorer API. For the policy that grants the necessary permissions to an IAM user. Your IAM role once created the last box will have the access key and secret key. you can also use AWS CLI to create the role. This would be a one time creation.  For achedemic simplicity, the following will suffice, until security matters.
-   <pre>
-   {    "Version": "2012-10-17",    "Statement": [        {            "Sid": "VisualEditor0",            "Effect": "Allow",            "Action": "ec2:*",            "Resource": "*"        }    ]}
 
-   </pre>
 
-2. Pull down the code repo.
+2. Pull down the code repo to the host where AWSCost Utility will run.
 
    ```bash
    git clone https://github.com/nishantrama/AWSCost
@@ -36,16 +33,12 @@ An IAM user must be granted explicit permission to query the AWS Cost Explorer A
     ```bash
     cd AWSCost
     ```
-4. Install the necessary packages.
 
-   ```bash
-   <blah, blah, blah>
-   ```
+### Step 2. Create keys and grant AWSCost Utility access to your 
 
+4. Review the following Dynatrace documentation [Metric ingestion protocol](https://www.dynatrace.com/support/help/how-to-use-dynatrace/metrics/metric-ingestion/metric-ingestion-protocol).
 
-5. Review the following Dynatrace documentation [Metric ingestion protocol](https://www.dynatrace.com/support/help/how-to-use-dynatrace/metrics/metric-ingestion/metric-ingestion-protocol).
-
-### Step 2. Execute the script to start the AWS Cost daemon. 
+### Step 3. Execute the script to start the AWS Cost daemon. 
 
 1. Create AWS keys to allow access to your AWSCost Utility Daemon
 
@@ -64,6 +57,23 @@ An IAM user must be granted explicit permission to query the AWS Cost Explorer A
 
 
 
-### Step 3. Query Data in DT Data Explorer
+### Step 4. Query Data in DT Data Explorer
 
 1. Dynatrace UI -> Explore Data -> AWS.cost.total<?> -> Max -> Split by name
+
+
+### TODO
+1. Detect and display if OA is/not installed on EC2 Instance
+
+2. Rewrite in Python for portability to all environments
+
+3. Verify Plugin is actually running on EC2 instance before deploying
+
+4. Integrate [AWS GetRightSizing Recommendations](
+https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetRightsizingRecommendation.html)
+
+5. Expand support to other cloud solutions 
+
+6. Make this work on non-OA monitored environment
+
+7. Refine AWS permissions to minimum set.
