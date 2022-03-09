@@ -3,7 +3,9 @@
 ## Overview
 Provide an automated mechanism to pull metrics from AWS Billing and Cost Management APIs and ingest them into Dynatrace for charting and Dashboard visualization.
 
-
+<p align="center">
+  <img width="460" height="300" src="assets/AppMon_Screenshot.png">
+</p>
 
 ### Prerequisites
 - bash shell
@@ -62,7 +64,7 @@ An IAM user must be granted explicit permission to query the AWS Cost Explorer A
 1. Dynatrace UI -> Explore Data -> AWS.cost.total<?> -> Max -> Split by name
 
 
-### TODO
+## TODO
 1. Detect and display if OA is/not installed on EC2 Instance
 
 2. Rewrite in Python for portability to all environments
