@@ -17,12 +17,15 @@ A conceptual visualization of the end goal. Keep an eye on the goal while enjoyi
 
 
 <project-description></p>
-<p align="center"><i>Resolve the mystery of where your AWS costs go.<project-description></i></p>
+<p align="center"><i>Resolve the mystery of where your AWS costs go.<project-description></i>
+ <img width="460" height="300" src="assets/Cloud_Money.png">
+</p>
+
 
 
 ### Step 1: Getting Started
 
-1. Granting IAM permissions to use the AWS Cost Explorer API<br>
+1. Grant IAM permissions to use the AWS Cost Explorer API<br>
 An IAM user must be granted explicit permission to query the AWS Cost Explorer API. For the policy that grants the necessary permissions to an IAM user. Your IAM role once created the last box will have the access key and secret key. you can also use AWS CLI to create the role. This would be a one time creation.  For acedemic simplicity, the following will suffice, until security matters.
 <p align="center">
 Screenshot of required permissions.<br>
