@@ -21,16 +21,26 @@ else
   exit 0
 fi
 
-#aws ce get-cost-and-usage --time-period Start=2022-03-08,End=2022-03-09 --metrics "BlendedCost" --granularity "DAILY" --group-by Type=DIMENSION,Key=INSTANCE_TYPE
+currDate = date '+%Y:%m:%d'
+oldDate = date --date="yesterday" '+%Y:%m:%d'
+
+costResponse = aws ce get-cost-and-usage --time-period Start=$oldDate,End=$currDate --metrics "UnblendedCost" --granularity "DAILY" --group-by Type=DIMENSION,Key=INSTANCE_TYPE
+
+if [ $costResponse =~ '.*Data is not available.*' ];
+then
+  costValue = 0
+else
+  
+fi
+
+# this will need to include a loop for all instance type
+dataRaw = 'custom.aws.unblendedcost,instancetype= '$costValue'
+#custom.aws.unblendedcost dt.meta.displayName="AWS UnblendedCost"' 
 
 curl --location --request POST 'https://'$DT_HOST'/api/v2/metrics/ingest' \
 --header 'Content-Type: text/plain; charset=utf-8' \
 --header 'Authorization: Api-Token '$DT_API_TOKEN \
---data-raw 'custom.aws.blendedcost,instancetype= NUMBER 
-#custom.aws.blendedcost dt.meta.displayName="AWS BlendedCost"
-custom.aws.blendedcost,instancetype= NUMBER
-custom.aws.blendedcost,instancetype= NUMBER
-custom.aws.blendedcost,instancetype= NUMBER '
+--data-raw $dataRaw
 
 #check if OneAgent is running
 
