@@ -9,10 +9,21 @@ A conceptual visualization of the end goal. Keep an eye on the goal while enjoyi
   <img width="460" height="300" src="assets/AppMon_Screenshot.png">
 </p>
 
+
+###Team
+- Markie "Team Lead" Duby
+- Aakash " " Kadakia
+- Nish "Stella/Tezla" Rama
+- Joe "Which city is he in" Hoffman
+
+
+
+
 ### Prerequisites
 - bash shell
 - Linux
 - git
+- DT OneAgent running on host executing AWSCost Utility
 - AWS instance with AWS Cost API enabled
 
 
@@ -34,9 +45,9 @@ A conceptual visualization of the end goal. Keep an eye on the goal while enjoyi
    git clone https://github.com/nishantrama/AWSCost
    ```
 
-2. Setup ENV_VARs in measured instance
+2. Setup ENV_VARs for the process running AWSCost Utility
    ```bash
-   DT_HOST=<instance>.live.dynatrace.com<br>
+   DT_HOST=<instance>.live.dynatrace.com
    DT_API_TOKEN=abc123....xyz
    ```
 
@@ -58,19 +69,15 @@ Screenshot of required permissions.<br>
 
 ### Step 3. Execute the script to start the AWS Cost daemon. 
 
-1. Create AWS keys to allow access to your AWSCost Utility Daemon
+
+
+1. Start the script.
 
    ```bash
-   <blah, blah, blah>
+   ./src/servercost.sh
    ```
 
-2. Start the script.
-
-   ```bash
-   node src/start_AWSCost_Utility
-   ```
-
-3. Verify console for any errors.  Resolve errors.  <Magic happens here>
+2. Verify console for any errors.  Resolve errors.  <Magic happens here>
 
 
 
@@ -92,6 +99,4 @@ https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetRight
 
 5. Expand support to other cloud solutions 
 
-6. Make this work on non-OA monitored environment
-
-7. Refine AWS permissions to minimum set.
+6. Refine AWS permissions to minimum set.
