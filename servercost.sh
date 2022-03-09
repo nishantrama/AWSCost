@@ -23,7 +23,7 @@ fi
 
 #aws ce get-cost-and-usage --time-period Start=2022-03-08,End=2022-03-09 --metrics "BlendedCost" --granularity "DAILY" --group-by Type=DIMENSION,Key=INSTANCE_TYPE
 
-curl --location --request POST 'https://localhost:9999/e/ftz75492/api/v2/metrics/ingest' \
+curl --location --request POST 'https://'$DT_HOST'/api/v2/metrics/ingest' \
 --header 'Content-Type: text/plain; charset=utf-8' \
 --header 'Authorization: Api-Token '$DT_API_TOKEN \
 --data-raw 'custom.aws.blendedcost,instancetype= NUMBER 
