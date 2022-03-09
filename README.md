@@ -25,21 +25,16 @@ A conceptual visualization of the end goal. Keep an eye on the goal while enjoyi
 
 ### Step 1: Getting Started
 
-1. Grant IAM permissions to use the AWS Cost Explorer API<br>
-An IAM user must be granted explicit permission to query the AWS Cost Explorer API. For the policy that grants the necessary permissions to an IAM user. Your IAM role once created the last box will have the access key and secret key. you can also use AWS CLI to create the role. This would be a one time creation.  For acedemic simplicity, the following will suffice, until security matters.
-<p align="center">
-Screenshot of required permissions.<br>
-  <img width="460" height="300" src="assets/IAMConfig.png">
-</p>
 
 
-2. Pull down the code repo to the host where AWSCost Utility will run.
+
+1. Pull down the code repo to the host where AWSCost Utility will run.
 
    ```bash
    git clone https://github.com/nishantrama/AWSCost
    ```
 
-3. Setup ENV_VARs in measured instance
+2. Setup ENV_VARs in measured instance
    ```bash
    <blah, blah, blah>
    ```
@@ -50,9 +45,15 @@ Screenshot of required permissions.<br>
     cd AWSCost
     ```
 
-### Step 2. Create keys and grant AWSCost Utility access to your 
+### Step 2. Create keys and grant AWSCost Utility access to your EC2 instance data
 
-4. Review the following Dynatrace documentation [Metric ingestion protocol](https://www.dynatrace.com/support/help/how-to-use-dynatrace/metrics/metric-ingestion/metric-ingestion-protocol).
+1. Grant IAM permissions to use the AWS Cost Explorer API<br>
+An IAM user must be granted explicit permission to query the AWS Cost Explorer API. For the policy that grants the necessary permissions to an IAM user. Your IAM role once created the last box will have the access key and secret key. you can also use AWS CLI to create the role. This would be a one time creation.  For acedemic simplicity, the following will suffice, until security matters.
+<p align="center">
+Screenshot of required permissions.<br>
+  <img width="460" height="300" src="assets/IAMConfig.png">
+</p>
+
 
 ### Step 3. Execute the script to start the AWS Cost daemon. 
 
