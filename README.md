@@ -3,8 +3,9 @@
 ## Overview
 Provide an automated mechanism to pull metrics from AWS Billing and Cost Management APIs and ingest them into Dynatrace for charting and Dashboard visualization.
 
-A conceptual visualization of the end goal. Keep an eye on the goal while enjoying the journey.
+
 <p align="center">
+A conceptual visualization of the end goal. Keep an eye on the goal while enjoying the journey.<br>
   <img width="460" height="300" src="assets/AppMon_Screenshot.png">
 </p>
 
