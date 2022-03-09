@@ -17,8 +17,8 @@ A conceptual visualization of the end goal. Keep an eye on the goal while enjoyi
 
 
 <project-description></p>
-<p align="center"><i>Resolve the mystery of where your AWS costs go.<project-description></i>
- <img width="460" height="300" src="assets/Cloud_Money.png">
+<p align="center"><i>Resolve the mystery of where your AWS costs go.<project-description></i><br>
+ <img width="360" height="200" src="assets/Cloud_Money.png">
 </p>
 
 
