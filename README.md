@@ -36,7 +36,8 @@ A conceptual visualization of the end goal. Keep an eye on the goal while enjoyi
 
 2. Setup ENV_VARs in measured instance
    ```bash
-   <blah, blah, blah>
+   DT_HOST=<instance>.live.dynatrace.com<br>
+   DT_API_TOKEN=abc123....xyz
    ```
 
 3. Change directories.
