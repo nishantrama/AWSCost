@@ -1,13 +1,24 @@
 #!/usr/bin/env bash
 
-#Query Cost of Instae
+#Query Cost of Insta
 
-
-if [ aws --version =~ "^aws-cli.*" ];
+aws --version | grep 'aws-cli/' &> /dev/null
+if [ $? == 1 ];
 then
   echo "AWS Host Okay"
 else
   echo "Not an AWS Host"
+  exit 0
+fi
+
+
+ps -ef | grep 'oneagentwatchdog' &> /dev/null
+echo $?
+if [ $? == 1 ];
+then
+  echo "OneAgent Installed Okay"
+else
+  echo "OneAgent not running, quitting"
   exit 0
 fi
 
@@ -27,6 +38,11 @@ fi
 #If OA not running
 
   #Send via Public API
+
+
+
+
+
 
 
 
