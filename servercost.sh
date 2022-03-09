@@ -2,9 +2,10 @@
 
 #Query Cost of Instae
 
-if [ aws --version =~ "^aws-cli.*" ]
+
+if [ aws --version =~ "^aws-cli.*" ];
 then
-  echo "AWS Host Okey"
+  echo "AWS Host Okay"
 else
   echo "Not an AWS Host"
   exit 0
@@ -26,6 +27,11 @@ fi
 #If OA not running
 
   #Send via Public API
+
+
+
+
+
 
 
 
