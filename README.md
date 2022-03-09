@@ -20,10 +20,10 @@ Provide an automated mechanism to pull metrics from AWS Billing and Cost Managem
 
 1. Granting IAM permissions to use the AWS Cost Explorer API<br>
 An IAM user must be granted explicit permission to query the AWS Cost Explorer API. For the policy that grants the necessary permissions to an IAM user. Your IAM role once created the last box will have the access key and secret key. you can also use AWS CLI to create the role. This would be a one time creation.  For achedemic simplicity, the following will suffice, until security matters.
-   <code>
+   <pre>
    {    "Version": "2012-10-17",    "Statement": [        {            "Sid": "VisualEditor0",            "Effect": "Allow",            "Action": "ec2:*",            "Resource": "*"        }    ]}
 
-   </code>
+   </pre>
 
 2. Pull down the code repo.
 
